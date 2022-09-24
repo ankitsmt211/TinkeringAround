@@ -1,0 +1,22 @@
+#input{
+    color: white;
+    
+}
+
+#butt{
+    background-color: black;
+}
+
+#body{
+    background-color:slategray;
+}
+
+#firstform{
+    text-align: center;
+}
+
+
+
+.field:focus{
+    background: white;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body id="body">
+    <div id="firstform">
+    <form id="input"  >
+        <label for="">Name:</label><br>
+        <input type="text" name="" class="field"  placeholder="Name" id="uname"><br>
+        <label for="">Password</label><br>
+        <input type="password" name="" class="field" placeholder="Password" id="pass"><br>
+        <button id="butt" type="submit">Submit</button>
+    </form>
+</div>
+    
+</body>
+
+
+<script>
+
+    /* function validate(){
+     const uname=document.getElementById('uname')
+     const pass=document.getElementById('pass')
+ 
+     if(uname.value==""||pass.value==""){
+         alert("Fields can't be left empty")
+         return false;
+     }
+ 
+     else {
+         if(pass.value.length>=8) return true;
+      else {
+         alert("password must be more than 8 characters")
+         return false;
+     }
+     }*/
+
+
+     const uname=document.getElementById('uname')
+     const pass= document.getElementById('pass')
+     const form=document.getElementById('input')
+
+     form.addEventListener("submit",validate)
+     
+     
+     function validate(){
+
+        const reg=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/
+         if(pass.value.match(reg)){
+             alert("pretty creds")
+         }
+
+         else alert("bad creds ")
+
+     }
+
+
+     
+ 
+ </script>
+
+
+</html>
